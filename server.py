@@ -38,7 +38,6 @@ def fapi(name: "str"):
         data = json.loads(file.read())
         el = {"time" : time(), "name" : name}        
         data["items"].append(str(el))
-        print(data)
         d = json.dumps(data, indent=4)
         content = d
     with open("test.json", "w"): pass
