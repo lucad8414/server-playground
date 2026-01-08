@@ -1,15 +1,35 @@
 from fastapi import FastAPI
+from fastapi.responses import HTMLResponse
 from time import time
+from parser import embedding_css
 import json
 
 
 server = FastAPI()
 
-@server.get("/")
+
+# get APIs for the browser to get the websites information
+# ----------------------------------------------------------------------------
+@server.get("/", response_class=HTMLResponse)
 def root():
-    return {"Item": "Hello World!"}
+    return embedding_css("index.html", "format.css", "<link rel=\"stylesheet\" href=\"format.css\">")
 
+# ----------------------------------------------------------------------------
+@server.get("/training/", response_class=HTMLResponse)
+def training():
+    return embedding_css("training.html", "format.css", "<link rel=\"stylesheet\" href=\"format.css\">")
 
+# ----------------------------------------------------------------------------
+@server.get("/diet/", response_class=HTMLResponse)
+def training():
+    return embedding_css("diet.html", "format.css", "<link rel=\"stylesheet\" href=\"format.css\">")
+
+# ----------------------------------------------------------------------------
+@server.get("/rest/", response_class=HTMLResponse)
+def training():
+    return embedding_css("rest.html", "format.css", "<link rel=\"stylesheet\" href=\"format.css\">")
+
+# ----------------------------------------------------------------------------
 
 @server.get("/api_test/")
 def fapi(name: "str"):

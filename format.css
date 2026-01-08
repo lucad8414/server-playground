@@ -1,0 +1,125 @@
+/* design for the header;
+used on every page;
+h1 still usable;*/
+header img{
+    float: left;
+    margin-right: 5%;
+
+}
+header h1{
+    line-height: 150%;
+    color: whitesmoke;
+    background-color: darkgreen;
+    font-size: 200%;
+    border-top-right-radius: 35%;
+    border-bottom-left-radius: 35%;
+    text-align: center;
+}
+header p{
+    background-color: darkgreen;
+    border-bottom-right-radius: 35%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    line-height: 200%;
+    margin-bottom: 8%;
+}
+
+
+/* design for Homepage;
+global design for body, p, img and ul;
+h2 and h3 captured and unusable;*/
+body{
+    margin-top: 5%;
+    margin-left: 7%;
+    margin-right: 4%;
+    background-color: greenyellow;
+}
+p {
+    color: black;
+    font-size: 100%;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: left;
+}
+img {
+    border-radius: 25%;
+    border-top-left-radius: 0%;
+    width: 15%; 
+}
+ul {
+    color: whitesmoke;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 130%;
+    margin-left: 40%;
+}
+h2{
+    color: darkgreen;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    width: 65%;
+    text-align: end;
+    line-height: 150%;
+}
+h3{
+    color: darkgreen;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: end;
+    line-height: 150%;
+    margin-left: 50%; 
+}
+
+
+/* design for the footer;
+using h3 definition from homepage;*/
+footer ul{
+    float: right;
+}
+
+/*design for tracking section;
+h4 still usable;*/
+#tracking img{
+    float: right;
+    width: 20%;
+}
+#tracking h4{
+    margin-right: 30%;
+}
+#tracking p{
+    margin-right: 30%;
+}
+
+/* design for section inputfield;
+using base input design;
+using base button design;
+using custom div design;*/
+
+#inputfield{
+    display: grid;
+
+}
+#inputfield h5{
+    color:red;
+}
+#inputfield h6{
+    color: blue;
+}
+#inputfield h7{
+    color: greenyellow;
+    grid-row: 5/6;
+}
+#inp_1{
+   color: green;
+   grid-row: 1/2;
+
+}
+#inp_2{
+    color: blueviolet;
+    grid-row: 3/4;
+}
+#inputfield button{
+    color: green;
+    grid-row: 10;
+}
+#asi_out{
+    color: orange;
+    width: 80%;
+    grid-column: 15;
+    grid-row: 1/5;
+}
