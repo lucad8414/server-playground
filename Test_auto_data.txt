@@ -1,0 +1,11 @@
+Auto
+Art	Datum	Kosten
+Abschleppen 	01.10.26	418,88€
+Strafzettel	01.10.26	40,00€
+Tank	02.10.26	77,10€
+Parken	03.10.26	1,50€
+Parken 	04.10.26	6€
+Tank	05.10.26	74,31€
+Parken 	06.10.26	8,00€
+Tank 	16.10.26	81,51€
+

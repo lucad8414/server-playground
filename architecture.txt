@@ -1,0 +1,36 @@
+Suggestion by ChatGPT
+
+household_app/
+│
+├── main.py
+│
+├── api/
+│   ├── upload.py
+│   ├── transactions.py
+│   └── statistics.py
+│
+├── services/
+│   ├── import_service.py
+│   ├── duplicate_detection.py
+│   ├── normalization.py
+│   └── statistics_service.py
+│
+├── database/
+│   ├── connection.py
+│   ├── models.py
+│   └── repository.py
+│
+├── frontend/
+│   ├── index.html
+│   ├── upload.html
+│   ├── css/
+│   └── js/
+│
+├── data/
+│   ├── raw/
+│   └── household.db
+│
+└── tests/
+    ├── test_import.py
+    ├── test_duplicates.py
+    └── test_statistics.py
