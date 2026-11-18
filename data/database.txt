@@ -1,0 +1,5 @@
+1. All tables should have an ID (not necessarily unique, but probably).
+For this we hash the "name", the date and the amount spend. -> In reality should be unique
+2. All tables should have a source. This directs to the exact row in the raw data file it came from.
+3. All tables need date and price in the DD.MM.YY format and the price in the two decimal float format.
+4. 

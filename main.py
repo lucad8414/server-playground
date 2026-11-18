@@ -1,7 +1,7 @@
 from fastapi import FastAPI, HTTPException
 from fastapi.responses import HTMLResponse
 from time import time
-from parser import embedding_css
+from services.parser import embedding_css
 import json
 
 
