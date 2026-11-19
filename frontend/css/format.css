@@ -80,6 +80,25 @@ img {
 
 /* -------------------------------------------------------------------------*/
 
+table{
+    font-family: var(--custom-font-family-text);
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th{
+    font-size: 2vw;
+    border-style: solid;
+}
+
+td{
+    text-align: left;
+    font-size: 1.5vw;
+    border-style: double;
+}
+
+/* -------------------------------------------------------------------------*/
+
 /*custom designs for div classes*/
 .row{
     /* flow-root forces row to contain floating elements, else they are not inside.*/
@@ -105,6 +124,8 @@ img {
 
 .placeholder{
     width: 100%;
+    display: flex;
+    align-items: stretch;
 }
 
 .horizontal{
@@ -116,11 +137,11 @@ img {
 
 .display{
     display:flow-root;
-    width: 78%;
+    width: 80%;
     float: left;
     min-height: 200px;
     max-height: 500px;
-    background-color: #b46258;
+    background-color: var(--custom-light-blue);
     margin-top: 10px;
     margin-bottom: 20px;
     border-radius: 10%;
@@ -131,15 +152,16 @@ img {
 .option{
     display: flow-root;
     margin-top: 10px;
-    width: 18%;
+    width: 20%;
     min-height: 200px;
     max-height: 500px;
-    background-color: #8e9a98;
+    background-color: var(--custom-red);
     float: right;
     margin-bottom: 20px;
     border-style: solid;
     border-radius: 10px;
 }
+
 
 .horizontal_button{
     width: 18%;
@@ -149,6 +171,13 @@ img {
     background-color: var(--custom-grey);
     float: left;
     border-style: outset;
+}
+
+.table-container{
+    width: 100%;
+    max-height: 500px;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
 /* -------------------------------------------------------------------------*/
