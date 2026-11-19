@@ -1,11 +1,13 @@
 from fastapi import FastAPI, HTTPException
 from fastapi.responses import HTMLResponse
+from fastapi.staticfiles import StaticFiles
 from time import time
 from services.parser import embedding_css
 import json
 
 
 server = FastAPI()
+server.mount("/frontend/static", StaticFiles(directory="frontend/static"), "frontend/static")
 ACCOUNTS = {"Luca": "Hello World!"}
 
 # get APIs for the browser to get the websites information
@@ -30,6 +32,8 @@ def rest():
     return embedding_css("frontend/rest.html", "frontend/css/format.css", "<link rel=\"stylesheet\" href=\"format.css\">")
 
 # ----------------------------------------------------------------------------
+
+
 
 @server.get("/api_test", response_class=HTMLResponse)
 def fapi(username: "str", password: "str"):
