@@ -4,10 +4,17 @@ from fastapi.staticfiles import StaticFiles
 from time import time
 from services.parser import embedding_css
 import json
+from pathlib import Path
 
 
 server = FastAPI()
-server.mount("/frontend/static", StaticFiles(directory="frontend/static"), "frontend/static")
+BASE_DIR = Path(__file__).resolve().parent
+
+server.mount(
+    "/frontend/static",
+    StaticFiles(directory=BASE_DIR / "frontend" / "static"),
+    name="static"
+)
 ACCOUNTS = {"Luca": "Hello World!"}
 
 # get APIs for the browser to get the websites information
@@ -22,9 +29,9 @@ def training():
     return embedding_css("frontend/training.html", "frontend/css/format.css", "<link rel=\"stylesheet\" href=\"format.css\">")
 
 # ----------------------------------------------------------------------------
-@server.get("/diet/", response_class=HTMLResponse)
-def diet():
-    return embedding_css("frontend/diet.html", "frontend/css/format.css", "<link rel=\"stylesheet\" href=\"format.css\">")
+@server.get("/dashboard/", response_class=HTMLResponse)
+def dashboard():
+    return embedding_css("frontend/dashboard.html", "frontend/css/format.css", "<link rel=\"stylesheet\" href=\"format.css\">")
 
 # ----------------------------------------------------------------------------
 @server.get("/rest/", response_class=HTMLResponse)
